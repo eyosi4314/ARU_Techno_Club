@@ -6,7 +6,7 @@ import Index from "./pages/index";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Blog from "./pages/blog";
-import Blogsingel from "./pages/blogsingel";
+import Blogsingel from "./pages/blogsingle";
 import Division from "./pages/division";
 import Teacher from "./pages/teacher";
 
