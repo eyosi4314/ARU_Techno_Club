@@ -2,6 +2,7 @@ import React from "react";
 import Menu from "../components/menu/menu";
 import Footer from "../components/footer/footer";
 import Home from "../components/home/home";
+import Section2 from "../components/section2/section2";
 
 // helper to resolve image URLs with Vite (works for assets in `src/assets/images`)
 const img = (name) => new URL(`../assets/images/${name}`, import.meta.url).href;
@@ -12,68 +13,7 @@ function index() {
       <Menu />
       <Home />
 
-      <section className="ftco-services ftco-no-pb">
-        <div className="container-wrap">
-          <div className="row no-gutters">
-            <div className="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-primary">
-              <div className="media block-6 d-block text-center">
-                <div className="icon d-flex justify-content-center align-items-center">
-                  <span className="flaticon-teacher" />
-                </div>
-                <div className="media-body p-2 mt-3">
-                  <h3 className="heading">Certified Teachers</h3>
-                  <p>
-                    Even the all-powerful Pointing has no control about the
-                    blind texts it is an almost unorthographic.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-darken">
-              <div className="media block-6 d-block text-center">
-                <div className="icon d-flex justify-content-center align-items-center">
-                  <span className="flaticon-reading" />
-                </div>
-                <div className="media-body p-2 mt-3">
-                  <h3 className="heading">Special Education</h3>
-                  <p>
-                    Even the all-powerful Pointing has no control about the
-                    blind texts it is an almost unorthographic.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-primary">
-              <div className="media block-6 d-block text-center">
-                <div className="icon d-flex justify-content-center align-items-center">
-                  <span className="flaticon-books" />
-                </div>
-                <div className="media-body p-2 mt-3">
-                  <h3 className="heading">Book &amp; Library</h3>
-                  <p>
-                    Even the all-powerful Pointing has no control about the
-                    blind texts it is an almost unorthographic.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-darken">
-              <div className="media block-6 d-block text-center">
-                <div className="icon d-flex justify-content-center align-items-center">
-                  <span className="flaticon-diploma" />
-                </div>
-                <div className="media-body p-2 mt-3">
-                  <h3 className="heading">Sport Clubs</h3>
-                  <p>
-                    Even the all-powerful Pointing has no control about the
-                    blind texts it is an almost unorthographic.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Section2 />
 
       <section className="ftco-section ftco-no-pt ftc-no-pb">
         <div className="container">
@@ -1064,7 +1004,6 @@ function index() {
         </div>
       </section>
 
-    
       <Footer />
     </>
   );

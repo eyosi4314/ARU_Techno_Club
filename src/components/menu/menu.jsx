@@ -34,7 +34,7 @@ function menu() {
                   </div>
                 </div>
                 <div className="col-md topper d-flex align-items-center justify-content-end">
-                  <p className="mb-0">
+                  <p className="mb-2 mb-md-0">
                     <Link
                       to="/login"
                       className="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center"
