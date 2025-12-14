@@ -1,6 +1,7 @@
 import React from "react";
-import Menu from "../components/menu.jsx";
-import Footer from "../components/footer.jsx";
+import Menu from "../components/menu/menu";
+import Footer from "../components/footer/footer";
+import Home from "../components/home/home";
 
 // helper to resolve image URLs with Vite (works for assets in `src/assets/images`)
 const img = (name) => new URL(`../assets/images/${name}`, import.meta.url).href;
@@ -9,59 +10,7 @@ function index() {
   return (
     <>
       <Menu />
-      {/* END nav */}
-      <section className="home-slider owl-carousel">
-        <div
-          className="slider-item"
-          style={{ backgroundImage: `url(${img("bg_1.jpg")})` }}
-        >
-          <div className="overlay" />
-          <div className="container">
-            <div
-              className="row no-gutters slider-text align-items-center justify-content-start"
-              data-scrollax-parent="true"
-            >
-              <div className="col-md-6 ftco-animate">
-                <h1 className="mb-4">Education Needs Complete Solution</h1>
-                <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </p>
-                <p>
-                  <a href="#" className="btn btn-primary px-4 py-3 mt-3">
-                    Contact Us
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="slider-item"
-          style={{ backgroundImage: `url(${img("bg_2.jpg")})` }}
-        >
-          <div className="overlay" />
-          <div className="container">
-            <div
-              className="row no-gutters slider-text align-items-center justify-content-start"
-              data-scrollax-parent="true"
-            >
-              <div className="col-md-6 ftco-animate">
-                <h1 className="mb-4">University, College School Education</h1>
-                <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </p>
-                <p>
-                  <a href="#" className="btn btn-primary px-4 py-3 mt-3">
-                    Contact Us
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Home />
 
       <section className="ftco-services ftco-no-pb">
         <div className="container-wrap">
@@ -1115,32 +1064,8 @@ function index() {
         </div>
       </section>
 
-      {/* footer section  */}
+    
       <Footer />
-      {/* loader */}
-      {/* <div id="ftco-loader" className="show fullscreen">
-        <svg className="circular" width="48px" height="48px">
-          <circle
-            className="path-bg"
-            cx={24}
-            cy={24}
-            r={22}
-            fill="none"
-            strokeWidth={4}
-            stroke="#eeeeee"
-          />
-          <circle
-            className="path"
-            cx={24}
-            cy={24}
-            r={22}
-            fill="none"
-            strokeWidth={4}
-            strokeMiterlimit={10}
-            stroke="#F96D00"
-          />
-        </svg>
-      </div> */}
     </>
   );
 }

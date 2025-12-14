@@ -1,6 +1,7 @@
 import React from "react";
-import Menu from "../components/menu";
-import Footer from "../components/footer";
+import Menu from "../components/menu/menu";
+import Footer from "../components/footer/footer";
+
 const img = (name) => new URL(`../assets/images/${name}`, import.meta.url).href;
 
 function teacher() {
@@ -380,8 +381,6 @@ function teacher() {
         </div>
       </section>
       <Footer />
-      {/* loader */}
-      {/* <div id="ftco-loader" className="show fullscreen"><svg className="circular" width="48px" height="48px"><circle className="path-bg" cx={24} cy={24} r={22} fill="none" strokeWidth={4} stroke="#eeeeee" /><circle className="path" cx={24} cy={24} r={22} fill="none" strokeWidth={4} strokeMiterlimit={10} stroke="#F96D00" /></svg></div> */}
     </>
   );
 }
