@@ -29,10 +29,10 @@ function Home() {
                 data-scrollax-parent="false"
               >
                 <div className="col-md-6 ftco-animate">
-                  <h1 className="mb-4">Education Needs Complete Solution</h1>
+                  <h1 className="mb-4">Arsi University Techno Based Club</h1>
                   <p>
-                    A small river named Duden flows by their place and supplies
-                    it with the necessary regelialia.
+                    Empowering student leaders to innovate with technology and
+                    create solutions for society.
                   </p>
                   <p>
                     <Link to="#" className="btn btn-primary px-4 py-3 mt-3">

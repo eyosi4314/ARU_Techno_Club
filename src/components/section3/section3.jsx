@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImg from "../../assets/images/about.jpg";
+import aboutImg from "../../assets/images/arsiun_health_campus.jpg";
 
 function Section3() {
   return (

@@ -1,4 +1,3 @@
-
 .owl-carousel.home-slider .slider-item {
   background-size: cover;
   background-repeat: no-repeat;
@@ -55,7 +54,7 @@
 }
 .owl-carousel.home-slider .slider-item .text p {
   font-size: 18px;
-  margin: 20px 0;
+  margin: 0 !important;
 }
 .owl-carousel.home-slider .slider-item .text .btn-primary {
   background: #fd6100;
@@ -66,4 +65,81 @@
 }
 .owl-carousel.home-slider .slider-item .text .btn-primary:hover {
   background: #e65500;
+}
+
+/* Ensure slide text uses same styles even when markup doesn't include the .text wrapper */
+.owl-carousel.home-slider .slider-item .container .col-md-6 h1 {
+  color: #fff;
+  font-size: 38px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.owl-carousel.home-slider .slider-item .container .col-md-6 p {
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Debug: force visibility for slide text in case other rules hide it */
+.owl-carousel.home-slider .slider-item .container .col-md-6 h1,
+.owl-carousel.home-slider .slider-item .container .col-md-6 p {
+  color: #fff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 9999 !important;
+  background: rgba(0, 0, 0, 0.12); /* temporary visual aid */
+  padding: 0.25rem 0.5rem;
+}
+
+/* Better fix: keep the .ftco-animate class (used by other layouts) but
+   override its hiding/transform behavior for slides only */
+.owl-carousel.home-slider .ftco-animate {
+  opacity: 1 !important;
+  visibility: visible !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* If animations are expected (JS adds .ftco-animated), allow them to play
+   but ensure they don't start hidden when inside the slider */
+.owl-carousel.home-slider .ftco-animated {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Remove the temporary background once verified */
+.owl-carousel.home-slider .slider-item .container .col-md-6 h1,
+.owl-carousel.home-slider .slider-item .container .col-md-6 p {
+  background: transparent !important;
+  
+}
+.owl-carousel.home-slider .slider-item .container .col-md-6 {
+   margin-top: 70px !important;
+}
+
+/* Tighten spacing between title, paragraph and button */
+.owl-carousel.home-slider .slider-item .container .col-md-6 h1 {
+  margin: 0 0 8px 0;
+}
+.owl-carousel.home-slider .slider-item .container .col-md-6 p {
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+.owl-carousel.home-slider .slider-item .container .col-md-6 .btn {
+  margin-top: 8px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+/* Align slide text near the bottom without removing the .ftco-animate class */
+.owl-carousel.home-slider .slider-item .container {
+  height: 100%;
+}
+.owl-carousel.home-slider .slider-item .row.slider-text {
+  height: 100%;
+  align-items: flex-end;
+}
+.owl-carousel.home-slider .slider-item .container .col-md-6 {
+  padding-bottom: 20px; /* adjust to move text closer/further from bottom */
 }

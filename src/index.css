@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal overflow across the site */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure media fits its container */
+img,
+picture,
+video,
+iframe,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility: center large content and prevent unexpected side scroll */
+.container-wrap,
+.container,
+.container-fluid {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Login logo shown above the login button */
+.login-logo img.login-above {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+/* Make the small logo that appears inside the login button slightly smaller */
+.btn .brand-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+@media (max-width: 576px) {
+  .login-logo img.login-above {
+    width: 40px;
+    height: 40px;
+  }
+}

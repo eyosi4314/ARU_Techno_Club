@@ -1,6 +1,6 @@
 import React from "react";
-import bg_3 from "../../assets/images/bg_3.jpg";
-import about_2 from "../../assets/images/about-2.jpg";
+import bg_3 from "../../assets/images/arsiun_ardu_campus.jpg";
+import about_2 from "../../assets/images/arsiun_ardu_campus.jpg";
 
 function Section4() {
   return (
@@ -41,17 +41,17 @@ function Section4() {
               <div className="col-md-6 heading-section heading-section-white pl-lg-5 pt-md-0 pt-5">
                 <h2 className="mb-4">Arsi University</h2>
                 <p>
-                  Separated they live in. A small river named Duden flows by
-                  their place and supplies it with the necessary regelialia. It
-                  is a paradisematic country. A small river named Duden flows by
-                  their place and supplies it with the necessary regelialia. It
-                  is a paradisematic country, in which roasted parts of
-                  sentences fly into your mouth.
+                  Arsi University is a growing public institution committed to
+                  academic excellence, innovation, and community impact. The
+                  university empowers students through quality education,
+                  skilled instructors, and a supportive learning environment
+                  that encourages research, technology, and real-world problem
+                  solving.
                 </p>
                 <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia. It is a paradisematic country,
-                  in which roasted parts of sentences fly into your mouth.
+                  The university equips students with advanced technology
+                  skills, innovation experience, and research expertise to build
+                  solutions for the digital world.
                 </p>
               </div>
             </div>
