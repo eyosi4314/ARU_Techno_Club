@@ -1,6 +1,38 @@
 import React from "react";
 import bg_3 from "../../assets/images/arsiun_ardu_campus.jpg";
 import about_2 from "../../assets/images/arsiun_ardu_campus.jpg";
+import { animate, useInView, motion } from "framer-motion";
+
+function AnimatedNumber({ value, duration = 2.2, className, style }) {
+  const ref = React.useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-10% 0px" });
+  const [count, setCount] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!inView) return;
+    const controls = animate(0, value, {
+      duration,
+      onUpdate(v) {
+        setCount(Math.floor(v));
+      },
+    });
+
+    return () => controls.stop();
+  }, [inView, value, duration]);
+
+  return (
+    <motion.span
+      ref={ref}
+      className={className}
+      style={style}
+      initial={{ scale: 0.95, opacity: 0.9 }}
+      animate={inView ? { scale: 1, opacity: 1 } : {}}
+      transition={{ duration: 0.45 }}
+    >
+      {count.toLocaleString()}
+    </motion.span>
+  );
+}
 
 function Section4() {
   return (
@@ -30,7 +62,9 @@ function Section4() {
                 >
                   <div className="video justify-content-center">
                     <a
-                      href="https://vimeo.com/45830194"
+                      href="https://youtu.be/_V6PYCiLuHI?si=hwGXEOQWbhX4ak-I"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="icon-video popup-vimeo d-flex justify-content-center align-items-center"
                     >
                       <span className="ion-ios-play" />
@@ -64,8 +98,39 @@ function Section4() {
                         <span className="flaticon-doctor" />
                       </div>
                       <div className="text">
-                        <strong className="number" data-number={18}>
-                          18
+                        <strong
+                          className="number"
+                          data-number={3}
+                          style={{
+                            whiteSpace: "nowrap",
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: "4px",
+                          }}
+                        >
+                          <AnimatedNumber
+                            value={3}
+                            duration={2.8}
+                            className="countup-number"
+                            style={{
+                              fontSize: "36px",
+                              fontWeight: 700,
+                              color: "#fff",
+                            }}
+                          />
+                          <span
+                            className="number-suffix"
+                            style={{
+                              color: "#fff",
+                              fontWeight: 700,
+                              fontSize: "36px",
+                              lineHeight: "36px",
+                              display: "inline-block",
+                              verticalAlign: "baseline",
+                            }}
+                          >
+                            K+
+                          </span>
                         </strong>
                         <span>Certified Teachers</span>
                       </div>
@@ -77,8 +142,39 @@ function Section4() {
                         <span className="flaticon-doctor" />
                       </div>
                       <div className="text">
-                        <strong className="number" data-number={401}>
-                          401
+                        <strong
+                          className="number"
+                          data-number={15}
+                          style={{
+                            whiteSpace: "nowrap",
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: "4px",
+                          }}
+                        >
+                          <AnimatedNumber
+                            value={15}
+                            duration={2.6}
+                            className="countup-number"
+                            style={{
+                              fontSize: "36px",
+                              fontWeight: 700,
+                              color: "#fff",
+                            }}
+                          />
+                          <span
+                            className="number-suffix"
+                            style={{
+                              color: "#fff",
+                              fontWeight: 700,
+                              fontSize: "36px",
+                              lineHeight: "36px",
+                              display: "inline-block",
+                              verticalAlign: "baseline",
+                            }}
+                          >
+                            K+
+                          </span>
                         </strong>
                         <span>Students</span>
                       </div>
@@ -90,10 +186,41 @@ function Section4() {
                         <span className="flaticon-doctor" />
                       </div>
                       <div className="text">
-                        <strong className="number" data-number={30}>
-                          30
+                        <strong
+                          className="number"
+                          data-number={70}
+                          style={{
+                            whiteSpace: "nowrap",
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: "4px",
+                          }}
+                        >
+                          <AnimatedNumber
+                            value={70}
+                            duration={2.6}
+                            className="countup-number"
+                            style={{
+                              fontSize: "36px",
+                              fontWeight: 700,
+                              color: "#fff",
+                            }}
+                          />
+                          <span
+                            className="number-suffix"
+                            style={{
+                              color: "#fff",
+                              fontWeight: 700,
+                              fontSize: "36px",
+                              lineHeight: "36px",
+                              display: "inline-block",
+                              verticalAlign: "baseline",
+                            }}
+                          >
+                            +
+                          </span>
                         </strong>
-                        <span>Courses</span>
+                        <span>Departments</span>
                       </div>
                     </div>
                   </div>
@@ -103,8 +230,39 @@ function Section4() {
                         <span className="flaticon-doctor" />
                       </div>
                       <div className="text">
-                        <strong className="number" data-number={50}>
-                          50
+                        <strong
+                          className="number"
+                          data-number={80}
+                          style={{
+                            whiteSpace: "nowrap",
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: "4px",
+                          }}
+                        >
+                          <AnimatedNumber
+                            value={80}
+                            duration={2.2}
+                            className="countup-number"
+                            style={{
+                              fontSize: "36px",
+                              fontWeight: 700,
+                              color: "#fff",
+                            }}
+                          />
+                          <span
+                            className="number-suffix"
+                            style={{
+                              color: "#fff",
+                              fontWeight: 700,
+                              fontSize: "36px",
+                              lineHeight: "36px",
+                              display: "inline-block",
+                              verticalAlign: "baseline",
+                            }}
+                          >
+                            +
+                          </span>
                         </strong>
                         <span>Awards Won</span>
                       </div>

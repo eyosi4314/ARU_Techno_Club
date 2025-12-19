@@ -1,5 +1,11 @@
 import React from "react";
 import aboutImg from "../../assets/images/arsiun_health_campus.jpg";
+import BuildIcon from "@mui/icons-material/Build";
+import LaptopMacIcon from "@mui/icons-material/LaptopMac";
+import SchoolIcon from "@mui/icons-material/School";
+import PeopleIcon from "@mui/icons-material/People";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import WorkIcon from "@mui/icons-material/Work";
 
 function Section3() {
   return (
@@ -28,10 +34,13 @@ function Section3() {
                 <div className="col-lg-6">
                   <div className="services-2 d-flex">
                     <div className="icon mt-2 d-flex justify-content-center align-items-center">
-                      <span className="flaticon-security" />
+                      <BuildIcon fontSize="large" />
                     </div>
                     <div className="text pl-3">
-                      <h3>🚀 Hands-On Projects </h3>
+                      <h3>
+                      
+                        Hands-On Projects
+                      </h3>
                       <p>
                         Build real applications, systems, and solutions through
                         team-based projects that solve real problems.
@@ -42,10 +51,13 @@ function Section3() {
                 <div className="col-lg-6">
                   <div className="services-2 d-flex">
                     <div className="icon mt-2 d-flex justify-content-center align-items-center">
-                      <span className="flaticon-reading" />
+                      <LaptopMacIcon fontSize="large" />
                     </div>
                     <div className="text pl-3">
-                      <h3>💻 Skill-Focused Training</h3>
+                      <h3>
+                        
+                        Skill-Focused Training
+                      </h3>
                       <p>
                         Practical training in web development, software
                         engineering, networking, AI, and emerging technologies.
@@ -56,10 +68,13 @@ function Section3() {
                 <div className="col-lg-6">
                   <div className="services-2 d-flex">
                     <div className="icon mt-2 d-flex justify-content-center align-items-center">
-                      <span className="flaticon-diploma" />
+                      <SchoolIcon fontSize="large" />
                     </div>
                     <div className="text pl-3">
-                      <h3>🧠 Workshops & Bootcamps</h3>
+                      <h3>
+                        
+                        Workshops & Bootcamps
+                      </h3>
                       <p>
                         Intensive sessions led by skilled students, mentors, and
                         professionals to boost your tech skills fast.
@@ -70,10 +85,13 @@ function Section3() {
                 <div className="col-lg-6">
                   <div className="services-2 d-flex">
                     <div className="icon mt-2 d-flex justify-content-center align-items-center">
-                      <span className="flaticon-education" />
+                      <PeopleIcon fontSize="large" />
                     </div>
                     <div className="text pl-3">
-                      <h3>🤝 Collaboration & Community</h3>
+                      <h3>
+                        
+                        Collaboration & Community
+                      </h3>
                       <p>
                         Connect with like-minded students, share knowledge, and
                         grow together in a supportive tech community.
@@ -84,10 +102,13 @@ function Section3() {
                 <div className="col-lg-6">
                   <div className="services-2 d-flex">
                     <div className="icon mt-2 d-flex justify-content-center align-items-center">
-                      <span className="flaticon-jigsaw" />
+                      <EmojiEventsIcon fontSize="large" />
                     </div>
                     <div className="text pl-3">
-                      <h3>🏆 Hackathons & Competitions</h3>
+                      <h3>
+                        
+                        Hackathons & Competitions
+                      </h3>
                       <p>
                         Participate in innovation challenges, coding
                         competitions, and tech events to test your skills.
@@ -98,10 +119,13 @@ function Section3() {
                 <div className="col-lg-6">
                   <div className="services-2 d-flex">
                     <div className="icon mt-2 d-flex justify-content-center align-items-center">
-                      <span className="flaticon-kids" />
+                      <WorkIcon fontSize="large" />
                     </div>
                     <div className="text pl-3">
-                      <h3>🌍 Career & Industry Exposure</h3>
+                      <h3>
+                        
+                        Career & Industry Exposure
+                      </h3>
                       <p>
                         Get mentorship, tech talks, and opportunities that
                         prepare you for internships, startups, and careers.

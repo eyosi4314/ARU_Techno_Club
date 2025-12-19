@@ -1,8 +1,8 @@
 import React from "react";
-import teacher1 from "../../assets/images/Mr Milikesa.jpg";
-import teacher2 from "../../assets/images/teacher-2.jpg";
-import teacher3 from "../../assets/images/teacher-3.jpg";
-import teacher4 from "../../assets/images/teacher-4.jpg";
+import teacher1 from "../../assets/images/Mr_Milikesa.jpg";
+import teacher2 from "../../assets/images/Mr_Sultan.jpg";
+import teacher3 from "../../assets/images/Ms_marta2.jpg";
+import teacher4 from "../../assets/images/Mr_Sadik.jpg";
 
 function Section6() {
   return (
@@ -11,11 +11,12 @@ function Section6() {
         <div className="container-fluid px-4">
           <div className="row justify-content-center mb-5 pb-2">
             <div className="col-md-8 text-center heading-section">
-              <h2 className="mb-4">Certified Teachers</h2>
+              <h2 className="mb-4">Academic Leadership & Support</h2>
               <p>
-                Separated they live in. A small river named Duden flows by their
-                place and supplies it with the necessary regelialia. It is a
-                paradisematic country
+                ARU_Techno_Based_Club is supported by experienced department
+                heads and academic leaders from Computer Science, Information
+                Systems, and Information Technology. Their guidance strengthens
+                our training, projects, and innovation-driven activities.
               </p>
             </div>
           </div>
@@ -29,12 +30,12 @@ function Section6() {
                   />
                 </div>
                 <div className="text pt-3 text-center">
-                  <h3>Bianca Wilson</h3>
-                  <span className="position mb-2">Teacher</span>
+                  <h3>Mr. Milikesa Dejena </h3>
+                  <span className="position mb-2">IS Department Head</span>
                   <div className="faded">
                     <p>
-                      I am an ambitious workaholic, but apart from that, pretty
-                      simple person.
+                      Driven by innovation and coding at Arsi University Techno
+                      Based Club.
                     </p>
                     <ul className="ftco-social text-center">
                       <li className="ftco-animate">
@@ -71,12 +72,13 @@ function Section6() {
                   />
                 </div>
                 <div className="text pt-3 text-center">
-                  <h3>Mitch Parker</h3>
-                  <span className="position mb-2">English Teacher</span>
+                  <h3>Mr. Sultan Shekana </h3>
+                  <span className="position mb-2">IT Department Head</span>
                   <div className="faded">
                     <p>
-                      I am an ambitious workaholic, but apart from that, pretty
-                      simple person.
+                      A student-led technology club fostering innovation,
+                      collaboration, and practical digital skills at Arsi
+                      University.
                     </p>
                     <ul className="ftco-social text-center">
                       <li className="ftco-animate">
@@ -113,12 +115,12 @@ function Section6() {
                   />
                 </div>
                 <div className="text pt-3 text-center">
-                  <h3>Stella Smith</h3>
-                  <span className="position mb-2">Art Teacher</span>
+                  <h3>Ms. Martha Mezgebu </h3>
+                  <span className="position mb-2">CS Department Head</span>
                   <div className="faded">
                     <p>
-                      I am an ambitious workaholic, but apart from that, pretty
-                      simple person.
+                      Empowering students through teamwork, practical skills,
+                      and confidence to become innovative technology leaders.
                     </p>
                     <ul className="ftco-social text-center">
                       <li className="ftco-animate">
@@ -155,12 +157,12 @@ function Section6() {
                   />
                 </div>
                 <div className="text pt-3 text-center">
-                  <h3>Monshe Henderson</h3>
-                  <span className="position mb-2">Science Teacher</span>
+                  <h3>Mr. Sadik Abas</h3>
+                  <span className="position mb-2">Staff Representative </span>
                   <div className="faded">
                     <p>
-                      I am an ambitious workaholic, but apart from that, pretty
-                      simple person.
+                      Empowering students through teamwork, practical skills and
+                      confidence to become innovative technology leaders.
                     </p>
                     <ul className="ftco-social text-center">
                       <li className="ftco-animate">

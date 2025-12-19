@@ -1,0 +1,100 @@
+/* Styles for course cards and carousel spacing */
+.course-slide {
+  padding: 0;
+}
+.course-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  border: 1px solid rgba(15, 23, 42, 0.04);
+}
+.course-card .img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 220px;
+  width: 100%;
+  display: block;
+  position: relative;
+  transition: transform 0.35s ease;
+}
+.course-card .img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.06) 0%,
+    rgba(0, 0, 0, 0.16) 100%
+  );
+  transition: background 0.35s ease, opacity 0.35s ease;
+}
+.course-card .text {
+  padding: 1.15rem;
+}
+.course-meta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+.course-card h3 {
+  margin-bottom: 0.45rem;
+  font-size: 1.05rem;
+}
+.course-card h3 a {
+  color: #0f172a;
+  font-weight: 600;
+  text-decoration: none;
+}
+.course-card p {
+  color: #475569;
+  margin-bottom: 0.75rem;
+}
+.course-card .btn.btn-primary {
+  background: linear-gradient(90deg, #ff5f6d, #ff9966) !important;
+  border: none !important;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px !important;
+  box-shadow: 0 6px 18px rgba(255, 95, 109, 0.12);
+}
+.course-card .btn.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(255, 95, 109, 0.2);
+}
+/* Hover/enhanced effect on the whole card */
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+}
+.course-card:hover .img {
+  transform: scale(1.04);
+}
+.course-card:hover .img::after {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 95, 109, 0.08) 0%,
+    rgba(99, 102, 241, 0.1) 100%
+  );
+}
+/* Remove extra spacing between this section and adjacent sections */
+.ftco-section.ftco-no-pt.ftco-no-pb {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/* Tighten carousel dots/slide spacing */
+.carousel .slide {
+  padding: 0;
+}
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .course-card .img {
+    height: 180px;
+  }
+  .course-meta {
+    font-size: 0.85rem;
+    gap: 0.6rem;
+  }
+}

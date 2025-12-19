@@ -4,7 +4,7 @@ import React from 'react'
 function section8() {
   return (
     <div>
-      {/* <section className="ftco-section bg-light">
+      <section className="ftco-section bg-light">
           <div className="container">
             <div className="row justify-content-center mb-5 pb-2">
               <div className="col-md-8 text-center heading-section ftco-animate">
@@ -144,7 +144,7 @@ function section8() {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
     </div>
   );
 }

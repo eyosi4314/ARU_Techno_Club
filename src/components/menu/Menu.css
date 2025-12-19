@@ -1,0 +1,184 @@
+/* Menu / Top bar styles: improve logos, icons, headings and hover effects */
+.bg-top.navbar-light {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+}
+.topper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.topper .icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.12);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.topper .icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(99, 102, 241, 0.18);
+}
+.topper .icon span {
+  font-size: 18px;
+  display: block;
+}
+.topper .text {
+  margin-left: 8px;
+}
+.topper .text span:first-child {
+  display: block;
+  font-size: 11px;
+  color: #6b7280;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.topper .text span:last-child {
+  display: block;
+  font-size: 13px;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* Brand logo and brand text */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.navbar-brand .brand-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+.navbar-brand:hover .brand-logo {
+  transform: scale(1.04);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.12);
+}
+.navbar-brand span {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Login / small logo */
+.login-logo img.login-above {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.login-logo img.login-above:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 48px rgba(2, 6, 23, 0.14);
+}
+.p-md-4,
+.py-md-4 {
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+/* Nav style and hover behavior: only text color changes on hover; active state uses same hover color */
+.navbar.navbar-expand-lg.navbar-dark.bg-dark {
+  background: linear-gradient(90deg, #0b1220 0%, #0f172a 100%);
+}
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.92);
+  border-radius: 8px;
+  transition: color 0.18s ease, transform 0.18s ease;
+  background: transparent;
+  box-shadow: none;
+}
+.navbar .nav-link:hover {
+  color: #ff5f6d;
+  transform: translateY(-2px);
+  background: transparent;
+  box-shadow: none;
+  background: linear-gradient(90deg, #ff5f6d 0%, #ff9966 100%) !important;
+}
+/* Active: indicate with the same hover text color (no background/underline) */
+.navbar .nav-item.active .nav-link,
+.navbar .nav-link.active {
+  color: #ff5f6d;
+  font-weight: 700;
+  background: transparent;
+  box-shadow: none;
+}
+/* remove underline/pseudo-element so only color indicates state */
+.navbar .nav-link::after {
+  display: none !important;
+}
+
+/* Login button adjustments to match vibrant style */
+.btn.btn-primary {
+  background: linear-gradient(90deg, #ff5f6d 0%, #ff9966 100%) !important;
+  border: none !important;
+  padding: 0.5rem 0.9rem;
+  border-radius: 40px;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(255, 96, 111, 0.12);
+}
+.btn.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 46px rgba(255, 96, 111, 0.18);
+  
+}
+.btn .brand-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border-radius: 6px;
+}
+
+/* Align tags and fix spacing on small screens */
+.topper .text,
+.login-logo,
+.icon {
+  display: flex;
+  align-items: center;
+}
+.topper .text {
+  gap: 4px;
+}
+@media (max-width: 768px) {
+  .topper {
+    gap: 8px;
+  }
+  .login-logo img.login-above {
+    width: 44px;
+    height: 44px;
+  }
+  .navbar-brand .brand-logo {
+    width: 36px;
+    height: 36px;
+  }
+  .navbar .nav-link {
+    padding: 0.4rem 0.7rem;
+  }
+}
+
+/* Small adjustments to ensure the topbar and nav sit flush */
+.bg-top.navbar-light {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.03);
+}
+
+/* Utility: give the header a subtle backdrop blur for modern look */
+.bg-top.navbar-light,
+.navbar {
+  backdrop-filter: blur(4px);
+}

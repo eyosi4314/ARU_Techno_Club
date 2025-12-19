@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Home from "../home/home";
 import logo from "../../../public/Arsi_logo.ico";
+import Club_logo from "../../assets/images/Club_logo.jpg";
+import "./Menu.css";
 
 function menu() {
   return (
@@ -39,8 +41,8 @@ function menu() {
                   <div className="d-flex flex-column align-items-end">
                     <div className="login-logo mb-2">
                       <img
-                        src={logo}
-                        alt="Arsi logo"
+                        src={Club_logo}
+                        alt="Club logo"
                         className="brand-logo login-above"
                       />
                     </div>
@@ -50,8 +52,8 @@ function menu() {
                         className="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center"
                       >
                         <img
-                          src={logo}
-                          alt="Arsi logo"
+                          src={Club_logo}
+                          alt="Club logo"
                           className="brand-logo"
                         />
                         <span>Log In</span>
@@ -99,7 +101,7 @@ function menu() {
                   Home
                 </Link>
               </li>
-              <li className="nav-item active">
+              <li className="nav-item">
                 <Link to="/about" className="nav-link">
                   About
                 </Link>
