@@ -1,4 +1,11 @@
-import React from 'react'
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "./Section9.css";
+import t1 from "../../assets/images/teacher-1.jpg";
+import t2 from "../../assets/images/teacher-2.jpg";
+import t3 from "../../assets/images/teacher-3.jpg";
+import t4 from "../../assets/images/teacher-4.jpg";
 
 function section9() {
   return (
@@ -17,118 +24,48 @@ function section9() {
           </div>
           <div className="row ftco-animate justify-content-center">
             <div className="col-md-12">
-              <div className="carousel-testimony owl-carousel">
-                <div className="item">
-                  <div className="testimony-wrap d-flex">
-                    <div
-                      className="user-img mr-4"
-                      style={{
-                        backgroundImage: `url(${img("teacher-1.jpg")})`,
-                      }}
-                    ></div>
-                    <div className="text ml-2">
-                      <span className="quote d-flex align-items-center justify-content-center">
-                        <i className="icon-quote-left" />
-                      </span>
-                      <p>
-                        Far far away, behind the word mountains, far from the
-                        countries Vokalia and Consonantia, there live the blind
-                        texts.
-                      </p>
-                      <p className="name">Racky Henderson</p>
-                      <span className="position">Father</span>
+              <Carousel
+                className="section9-carousel"
+                showArrows={true}
+                showThumbs={false}
+                showStatus={false}
+                showIndicators={true}
+                infiniteLoop={true}
+                emulateTouch={true}
+                autoPlay={true}
+                interval={5000}
+                stopOnHover={true}
+                swipeable={true}
+              >
+                {[
+                  { img: t1, name: "Racky Henderson", position: "Father" },
+                  { img: t2, name: "Henry Dee", position: "Mother" },
+                  { img: t3, name: "Mark Huff", position: "Mother" },
+                  { img: t4, name: "Rodel Golez", position: "Mother" },
+                  { img: t1, name: "Ken Bosh", position: "Mother" },
+                ].map((item, idx) => (
+                  <div className="item" key={idx}>
+                    <div className="testimony-wrap d-flex testimonial-card">
+                      <div
+                        className="user-img mr-4"
+                        style={{ backgroundImage: `url(${item.img})` }}
+                      ></div>
+                      <div className="text ml-2">
+                        <span className="quote d-flex align-items-center justify-content-center">
+                          <i className="icon-quote-left" />
+                        </span>
+                        <p>
+                          Far far away, behind the word mountains, far from the
+                          countries Vokalia and Consonantia, there live the
+                          blind texts.
+                        </p>
+                        <p className="name">{item.name}</p>
+                        <span className="position">{item.position}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="item">
-                  <div className="testimony-wrap d-flex">
-                    <div
-                      className="user-img mr-4"
-                      style={{
-                        backgroundImage: `url(${img("teacher-2.jpg")})`,
-                      }}
-                    ></div>
-                    <div className="text ml-2">
-                      <span className="quote d-flex align-items-center justify-content-center">
-                        <i className="icon-quote-left" />
-                      </span>
-                      <p>
-                        Far far away, behind the word mountains, far from the
-                        countries Vokalia and Consonantia, there live the blind
-                        texts.
-                      </p>
-                      <p className="name">Henry Dee</p>
-                      <span className="position">Mother</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="testimony-wrap d-flex">
-                    <div
-                      className="user-img mr-4"
-                      style={{
-                        backgroundImage: `url(${img("teacher-3.jpg")})`,
-                      }}
-                    ></div>
-                    <div className="text ml-2">
-                      <span className="quote d-flex align-items-center justify-content-center">
-                        <i className="icon-quote-left" />
-                      </span>
-                      <p>
-                        Far far away, behind the word mountains, far from the
-                        countries Vokalia and Consonantia, there live the blind
-                        texts.
-                      </p>
-                      <p className="name">Mark Huff</p>
-                      <span className="position">Mother</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="testimony-wrap d-flex">
-                    <div
-                      className="user-img mr-4"
-                      style={{
-                        backgroundImage: `url(${img("teacher-4.jpg")})`,
-                      }}
-                    ></div>
-                    <div className="text ml-2">
-                      <span className="quote d-flex align-items-center justify-content-center">
-                        <i className="icon-quote-left" />
-                      </span>
-                      <p>
-                        Far far away, behind the word mountains, far from the
-                        countries Vokalia and Consonantia, there live the blind
-                        texts.
-                      </p>
-                      <p className="name">Rodel Golez</p>
-                      <span className="position">Mother</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="testimony-wrap d-flex">
-                    <div
-                      className="user-img mr-4"
-                      style={{
-                        backgroundImage: `url(${img("teacher-1.jpg")})`,
-                      }}
-                    ></div>
-                    <div className="text ml-2">
-                      <span className="quote d-flex align-items-center justify-content-center">
-                        <i className="icon-quote-left" />
-                      </span>
-                      <p>
-                        Far far away, behind the word mountains, far from the
-                        countries Vokalia and Consonantia, there live the blind
-                        texts.
-                      </p>
-                      <p className="name">Ken Bosh</p>
-                      <span className="position">Mother</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                ))}
+              </Carousel>
             </div>
           </div>
         </div>
@@ -137,4 +74,4 @@ function section9() {
   );
 }
 
-export default section9
+export default section9;

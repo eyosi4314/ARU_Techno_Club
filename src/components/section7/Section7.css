@@ -1,0 +1,142 @@
+/* Registration card + form styles */
+.registration-card {
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.06),
+    rgba(6, 182, 212, 0.03)
+  );
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+.registration-header h2 {
+  margin: 0 0 0.25rem 0;
+  color: #0f172a;
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+.registration-header .muted {
+  color: #6b7280;
+  margin: 0;
+}
+
+.registration-form .form-control {
+  border-radius: 10px;
+  border: 1px solid #e6e9ef;
+  padding: 0.7rem 0.9rem;
+  transition: box-shadow 0.22s ease, border-color 0.18s ease,
+    transform 0.18s ease;
+  background: #fff;
+}
+.registration-form .form-control:focus {
+  outline: none;
+  border-color: var(--vibrant-1);
+  box-shadow: 0 10px 30px rgba(255, 95, 109, 0.12);
+  transform: translateY(-1px);
+}
+
+.btn-register {
+  background: linear-gradient(90deg, var(--vibrant-1), var(--vibrant-2));
+  border: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 800;
+  box-shadow: 0 12px 34px rgba(255, 95, 109, 0.12);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+.btn-register:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 46px rgba(255, 95, 109, 0.18);
+}
+
+/* make the form and the map align tightly and remove vertical gaps */
+.contact-section.ftco-no-pt.ftco-no-pb {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.registration-card,
+.col-md-6.d-flex {
+  margin-bottom: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .registration-card {
+    padding: 1rem;
+  }
+  .registration-header h2 {
+    font-size: 1.2rem;
+  }
+  .btn-register {
+    width: 100%;
+    display: block;
+  }
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}
+
+/* Small utility — small text and muted color */
+.muted {
+  color: #6b7280 !important;
+}
+.small {
+  font-size: 0.85rem !important;
+}
+
+/* Registration visual (image alongside form) */
+.registration-visual {
+  padding: 1rem;
+}
+.registration-image {
+  flex: 1 1 auto;
+  background-size: cover;
+  background-position: center;
+  border-radius: 14px;
+  min-height: 380px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.img-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 182, 212, 0.06) 0%,
+    rgba(99, 102, 241, 0.06) 100%
+  );
+}
+.img-overlay h3 {
+  color: #fff;
+  margin: 0;
+  font-weight: 800;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+.img-overlay .small {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+}
+
+.registration-image:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+@media (max-width: 768px) {
+  .registration-image {
+    min-height: 240px;
+    border-radius: 10px;
+  }
+  .registration-visual {
+    padding: 0.5rem;
+  }
+}

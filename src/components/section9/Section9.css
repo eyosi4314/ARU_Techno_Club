@@ -1,0 +1,125 @@
+/* Ensure heading and testimony contents are visible when .ftco-animate hides elements by default */
+.heading-section.ftco-animate,
+.testimony-section .ftco-animate,
+.testimony-section .ftco-animate * {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+/* Adjust top/bottom padding for a tighter testimonial section */
+.testimony-section {
+  padding-top: 3rem;
+  padding-bottom: 3.25rem;
+}
+.testimony-section .heading-section {
+  margin-bottom: 1rem;
+}
+
+/* Testimonial carousel styles */
+.testimonial-card {
+  align-items: center;
+  gap: 1rem;
+}
+.user-img {
+  width: 96px;
+  height: 96px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.user-img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 46px rgba(2, 6, 23, 0.12);
+}
+.testimonial-card .text {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), #fff);
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  box-shadow: none;
+}
+.quote {
+  width: 36px;
+  height: 36px;
+  background: var(--vibrant-accent);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+}
+.testimonial-card .name {
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+.testimonial-card .position {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+/* Ensure testimonial text is readable and well spaced */
+.testimonial-card .text p {
+  color: #334155;
+  margin: 0.6rem 0;
+  line-height: 1.6;
+}
+.testimonial-card .text {
+  padding: 1rem 1.15rem;
+}
+
+/* Make sure carousel center slide is emphasized (scoped to Section 9) */
+.section9-carousel .slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.section9-carousel .slide .item {
+  max-width: 720px;
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+/* small visual polish for testimonial cards */
+.testimonial-card {
+  gap: 1.15rem;
+  padding: 0.25rem;
+}
+
+/* Make the carousel item centered nicely (scoped to Section 9) */
+.section9-carousel .slide {
+  display: flex !important;
+  justify-content: center;
+}
+.section9-carousel .slide .item {
+  max-width: 700px;
+  width: 100%;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .user-img {
+    width: 72px;
+    height: 72px;
+  }
+  .section9-carousel .slide .item {
+    padding: 0 1rem;
+  }
+}
+
+/* Extra scoping and visibility safety for Section 9 carousel */
+.section9-carousel .slide {
+  display: block !important;
+}
+.section9-carousel .slide .item > .testimony-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.testimony-section {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.section9-carousel .slide * {
+  opacity: 1 !important;
+  visibility: visible !important;
+}

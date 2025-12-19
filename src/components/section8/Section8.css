@@ -1,0 +1,95 @@
+/* Fix: ensure heading sections with .ftco-animate are visible when JS isn't active */
+.heading-section.ftco-animate {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+/* Blog entry card improvements */
+.blog-entry {
+  margin-bottom: 1.75rem;
+}
+.block-20 {
+  height: 260px;
+  background-size: cover !important;
+  background-position: center center !important;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.32s ease, box-shadow 0.32s ease;
+}
+.block-20::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  opacity: 0.85;
+  transition: opacity 0.32s ease;
+}
+.block-20:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(2, 6, 23, 0.12);
+}
+.block-20:hover::after {
+  opacity: 0.6;
+}
+
+/* Date badge styling */
+.meta-date {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(3px);
+  color: #fff;
+  border-radius: 6px;
+}
+.meta-date .day {
+  font-size: 20px;
+  font-weight: 800;
+  display: block;
+}
+.meta-date .mos {
+  font-size: 12px;
+  display: block;
+}
+.meta-date .yr {
+  font-size: 11px;
+  display: block;
+}
+
+/* Text area */
+.blog-entry .text {
+  border-radius: 0 0 12px 12px;
+  padding: 1.25rem;
+}
+.blog-entry .heading a {
+  color: var(--heading-color, #0f172a);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.blog-entry .text p {
+  color: #475569;
+  margin-bottom: 0.75rem;
+}
+.blog-entry .btn-primary {
+  background: linear-gradient(90deg, var(--vibrant-1), var(--vibrant-2));
+  border: none;
+}
+
+/* Icons and meta alignment */
+.meta-chat .icon-chat {
+  margin-right: 0.4rem;
+  color: #6b7280;
+}
+
+/* Responsive tweak: reduce image height on small screens */
+@media (max-width: 768px) {
+  .block-20 {
+    height: 180px;
+  }
+  .meta-date {
+    transform: translateY(-10px);
+  }
+}
