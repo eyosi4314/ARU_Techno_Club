@@ -1,6 +1,6 @@
 import React from "react";
-import bg_3 from "../../assets/images/arsiun_health_campus2.jfif";
-import about_2 from "../../assets/images/arsiun_ardu_campus.jpg";
+import bg_3 from "../../assets/images/machine_learning.jpg";
+import about_2 from "../../assets/images/arsiun_health_campus.jpg";
 import "./section4.css";
 import { animate, useInView, motion } from "framer-motion";
 

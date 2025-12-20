@@ -11,7 +11,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(45deg, #0d1128 0%, #98a5c0 100%) !important;
+  background: linear-gradient(45deg, #0d1128 0%, #21cbf3 100%) !important;
   opacity: 0.5;
   transition: opacity 260ms ease, transform 420ms ease,
     background-position 600ms ease;
@@ -45,7 +45,7 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: rgba(135, 66, 231, 0.08);
+  background: linear-gradient(90deg, #2196f3, #21cbf3);
   display: inline-flex;
   align-items: center;
   justify-content: center;

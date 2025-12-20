@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./footer.css";
-const img = (name) =>
-  new URL(`../../assets/images/${name}`, import.meta.url).href;
+import code from "../../assets/images/presentation_project.jpg";
+import computer from "../../assets/images/student_listen2.jpg";
 
 function footer() {
   return (
@@ -44,11 +44,7 @@ function footer() {
                   <Link
                     to="#"
                     className="blog-img mr-4"
-                    style={{
-                      backgroundImage: `url(${img(
-                        "arsiun_dinsho_library.jfif"
-                      )})`,
-                    }}
+                    style={{ backgroundImage: `url(${computer})` }}
                   ></Link>
 
                   <div className="text">
@@ -81,9 +77,7 @@ function footer() {
                   <Link
                     to="#"
                     className="blog-img mr-4"
-                    style={{
-                      backgroundImage: `url(${img("arsiun_green_area.jfif")})`,
-                    }}
+                    style={{ backgroundImage: `url(${code})` }}
                   ></Link>
                   <div className="text">
                     <h3 className="heading">
@@ -170,19 +164,19 @@ function footer() {
               <div className="ftco-footer-widget mb-5">
                 <h2 className="ftco-heading-2 mb-0">Connect With Us</h2>
                 <ul className="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                  <li className="ftco-animate">
+                  <li className="">
                     <Link to="#" className="social-link" aria-label="Twitter">
                       <i className="material-icons">public</i>
                     </Link>
                   </li>
-                  <li className="ftco-animate">
+                  <li className="">
                     <Link to="#" className="social-link" aria-label="Facebook">
                       <i className="material-icons">thumb_up</i>
                     </Link>
                   </li>
-                  <li className="ftco-animate">
-                    <Link to="#" className="social-link" aria-label="Instagram">
-                      <i className="material-icons">camera_alt</i>
+                  <li className="">
+                    <Link to="#" className="social-link" aria-label="Telegram">
+                      <i className="material-icons">send</i>
                     </Link>
                   </li>
                 </ul>
