@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const img = (name) => new URL(`../assets/images/${name}`, import.meta.url).href;
+import "./footer.css";
+const img = (name) =>
+  new URL(`../../assets/images/${name}`, import.meta.url).href;
 
 function footer() {
   return (
@@ -43,7 +45,9 @@ function footer() {
                     to="#"
                     className="blog-img mr-4"
                     style={{
-                      backgroundImage: `url(${img("image_1.jpg")})`,
+                      backgroundImage: `url(${img(
+                        "arsiun_dinsho_library.jfif"
+                      )})`,
                     }}
                   ></Link>
 
@@ -78,7 +82,7 @@ function footer() {
                     to="#"
                     className="blog-img mr-4"
                     style={{
-                      backgroundImage: `url(${img("image_2.jpg")})`,
+                      backgroundImage: `url(${img("arsiun_green_area.jfif")})`,
                     }}
                   ></Link>
                   <div className="text">
@@ -113,7 +117,7 @@ function footer() {
                 <h2 className="ftco-heading-2">Links</h2>
                 <ul className="list-unstyled">
                   <li>
-                    <Link to="/home">
+                    <Link to="/">
                       <span className="ion-ios-arrow-round-forward mr-2" />
                       Home
                     </Link>
@@ -125,9 +129,9 @@ function footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/services">
+                    <Link to="/blog">
                       <span className="ion-ios-arrow-round-forward mr-2" />
-                      Services
+                      Blog
                     </Link>
                   </li>
                   <li>
@@ -167,18 +171,18 @@ function footer() {
                 <h2 className="ftco-heading-2 mb-0">Connect With Us</h2>
                 <ul className="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                   <li className="ftco-animate">
-                    <Link to="#">
-                      <span className="icon-twitter" />
+                    <Link to="#" className="social-link" aria-label="Twitter">
+                      <i className="material-icons">public</i>
                     </Link>
                   </li>
                   <li className="ftco-animate">
-                    <Link to="#">
-                      <span className="icon-facebook" />
+                    <Link to="#" className="social-link" aria-label="Facebook">
+                      <i className="material-icons">thumb_up</i>
                     </Link>
                   </li>
                   <li className="ftco-animate">
-                    <Link to="#">
-                      <span className="icon-instagram" />
+                    <Link to="#" className="social-link" aria-label="Instagram">
+                      <i className="material-icons">camera_alt</i>
                     </Link>
                   </li>
                 </ul>

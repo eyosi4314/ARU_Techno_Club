@@ -95,7 +95,7 @@
 
 /* Nav style and hover behavior: only text color changes on hover; active state uses same hover color */
 .navbar.navbar-expand-lg.navbar-dark.bg-dark {
-  background: linear-gradient(90deg, #0b1220 0%, #0f172a 100%);
+  background: linear-gradient(90deg, #0f172a 0%, #1e40af 100%);
 }
 .navbar .nav-link {
   color: rgba(255, 255, 255, 0.92);
@@ -109,7 +109,7 @@
   transform: translateY(-2px);
   background: transparent;
   box-shadow: none;
-  background: linear-gradient(90deg, #ff5f6d 0%, #ff9966 100%) !important;
+  background: linear-gradient(90deg, #ff5f6d 0%, #2563eb 100%) !important;
 }
 /* Active: indicate with the same hover text color (no background/underline) */
 .navbar .nav-item.active .nav-link,
@@ -126,7 +126,7 @@
 
 /* Login button adjustments to match vibrant style */
 .btn.btn-primary {
-  background: linear-gradient(90deg, #ff5f6d 0%, #ff9966 100%) !important;
+  background: linear-gradient(90deg, #2563eb 0%, #0f172a 100%) !important;
   border: none !important;
   padding: 0.5rem 0.9rem;
   border-radius: 40px;
@@ -177,7 +177,7 @@
 }
 
 /* Utility: give the header a subtle backdrop blur for modern look */
-.bg-top.navbar-light,
+.bg-top ,
 .navbar {
   backdrop-filter: blur(4px);
   background: linear-gradient(
@@ -210,7 +210,7 @@
   outline: none;
 }
 .navbar-toggler[aria-expanded="true"] {
-  background: linear-gradient(90deg, #ff5f6d, #ff9966);
+  background: linear-gradient(90deg, #1e40af, #2563eb);
 }
 
 /* Animated hamburger lines */
@@ -254,7 +254,7 @@
   transform-origin: center;
   height: 3px;
   width: 36px;
-  background: linear-gradient(90deg, #ff5f6d, #ff9966);
+  background: linear-gradient(90deg, #ff5f6d, #1e40af);
   border-radius: 999px;
   transition: transform 0.24s cubic-bezier(0.2, 0.8, 0.2, 1);
 }

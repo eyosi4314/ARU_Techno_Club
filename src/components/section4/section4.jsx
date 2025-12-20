@@ -1,6 +1,7 @@
 import React from "react";
-import bg_3 from "../../assets/images/arsiun_ardu_campus.jpg";
+import bg_3 from "../../assets/images/arsiun_health_campus2.jfif";
 import about_2 from "../../assets/images/arsiun_ardu_campus.jpg";
+import "./section4.css";
 import { animate, useInView, motion } from "framer-motion";
 
 function AnimatedNumber({ value, duration = 2.2, className, style }) {
@@ -43,14 +44,7 @@ function Section4() {
         style={{ backgroundImage: `url(${bg_3})` }}
         data-stellar-background-ratio="0.5"
       >
-        <div
-          className="overlay"
-          style={{
-            position: "absolute",
-            inset: 0,
-            background: "rgba(0,0,0,0.45)",
-          }}
-        />
+        <div className="overlay home-style-overlay" />
         <div className="container">
           {/* keep content above overlay */}
           <div style={{ position: "relative", zIndex: 2 }}>

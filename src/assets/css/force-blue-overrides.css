@@ -1,0 +1,106 @@
+Force Blue Theme Overrides (loaded after main style.css)
+:root {
+  --force-developer-cyan: #00e5ff !important; /* Neon cyan */
+  --force-developer-blue: #0d47a1 !important; /* Deep electric blue */
+}
+
+/* Buttons and primary elements */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(
+    90deg,
+    var(--force-developer-cyan),
+    var(--force-developer-blue)
+  ) !important;
+  border-color: var(--force-developer-blue) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(13, 71, 161, 0.12) !important;
+}
+
+/* Navbar background */
+.navbar,
+.bg-dark,
+.ftco-navbar-light,
+.navbar-dark {
+  background: linear-gradient(
+    90deg,
+    var(--force-developer-blue),
+    #071434
+  ) !important;
+}
+
+/* Overlay / image cover tint — stronger cyan-to-blue overlay */
+.overlay,
+.img-overlay,
+.card-bg .overlay,
+.section .overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 229, 255, 0.12) 0%,
+    rgba(13, 71, 161, 0.12) 100%
+  ) !important;
+}
+
+/* Blog thumbnail placeholders — ensure cover has blue tint */
+.blog-img {
+  box-shadow: 0 8px 20px rgba(13, 71, 161, 0.12) !important;
+  border-radius: 10px !important;
+  background-blend-mode: overlay !important;
+}
+
+/* Footer tweaks */
+
+
+/* Links and accents */
+/* a,
+.nav-link {
+  color: var(--force-developer-cyan) !important;
+} */
+a:hover,
+.nav-item:hover,
+.nav-link:hover
+ {
+  color: var(--force-developer-blue) !important;
+}
+
+
+/* Input focus and highlights */
+.form-control:focus {
+  border-color: var(--force-developer-cyan) !important;
+  box-shadow: 0 10px 30px rgba(0, 229, 255, 0.08) !important;
+}
+
+/* Ensure material icon buttons in footer stand out */
+ 
+
+/* Small utility: increase contrast for titles */
+
+
+/* Accessibility: ensure sufficient contrast for small text */
+
+.small {
+  color: #2563eb !important;
+}
+
+/* Brand text: keep visible and avoid unintended hover color change */
+.navbar-brand,
+.navbar-brand span,
+.ftco-navbar-light .navbar-brand {
+  color: #1f2933 !important; /* light, visible cyan */
+}
+
+/* Ensure brand keeps same color on hover/focus and is readable */
+.navbar-brand:hover,
+.navbar-brand:focus,
+.ftco-navbar-light .navbar-brand:hover,
+.ftco-navbar-light .navbar-brand:focus {
+  color: #2563eb !important;
+  
+}
+
+/* Ensure link hover rules don't override brand text color */
+a.navbar-brand:hover,
+a.navbar-brand:focus {
+  color: #2563eb !important;
+}
