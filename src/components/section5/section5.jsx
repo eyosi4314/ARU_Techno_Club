@@ -99,7 +99,7 @@ function Section5() {
                 centerSlidePercentage={33.3333}
                 autoPlay={true}
                 interval={2000}
-                stopOnHover={false}
+                stopOnHover={true}
                 dot
                 showIndicators={false}
               >
@@ -125,7 +125,7 @@ function Section5() {
                         <h3>
                           <a href="#">{c.title}</a>
                         </h3>
-                        <p>{c.description}</p>
+                        <p className="course-desc">{c.description}</p>
                         <p>
                           <a href="#" className="btn btn-primary">
                             Apply now

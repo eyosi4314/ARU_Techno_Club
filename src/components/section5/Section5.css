@@ -98,3 +98,44 @@
     gap: 0.6rem;
   }
 }
+
+/* Mobile-specific truncation & interactive styles */
+@media (max-width: 600px) {
+  .course-card .img {
+    height: 150px;
+  }
+  .course-card .text {
+    padding: 0.75rem;
+  }
+  .course-card h3 a {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+  }
+  .course-card .course-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3em;
+    max-height: calc(1.3em * 2); /* ensure consistent height */
+  }
+  .course-card .btn.btn-primary {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  /* subtle tap/active interaction for mobile */
+  .course-card:active,
+  .course-card:focus-within {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  }
+  /* make the whole card tappable and accessible */
+  .course-card a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.05);
+  }
+}

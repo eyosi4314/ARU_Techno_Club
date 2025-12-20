@@ -36,6 +36,7 @@ function section9() {
                 interval={5000}
                 stopOnHover={true}
                 swipeable={true}
+                useKeyboardArrows={true}
               >
                 {[
                   { img: t1, name: "Racky Henderson", position: "Father" },
@@ -51,16 +52,13 @@ function section9() {
                         style={{ backgroundImage: `url(${item.img})` }}
                       ></div>
                       <div className="text ml-2">
-                        <span className="quote d-flex align-items-center justify-content-center">
-                          <i className="icon-quote-left" />
-                        </span>
+                        <p className="name">{item.name}</p>
+                        <span className="position">{item.position}</span>
                         <p>
                           Far far away, behind the word mountains, far from the
                           countries Vokalia and Consonantia, there live the
                           blind texts.
                         </p>
-                        <p className="name">{item.name}</p>
-                        <span className="position">{item.position}</span>
                       </div>
                     </div>
                   </div>

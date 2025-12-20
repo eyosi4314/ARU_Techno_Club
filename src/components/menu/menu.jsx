@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Home from "../home/home";
 import logo from "../../../public/Arsi_logo.ico";
@@ -6,6 +6,7 @@ import Club_logo from "../../assets/images/Club_logo.jpg";
 import "./Menu.css";
 
 function menu() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <div className="bg-top navbar-light">
@@ -74,13 +75,20 @@ function menu() {
           <button
             className="navbar-toggler"
             type="button"
-            data-toggle="collapse"
-            data-target="#ftco-nav"
+            onClick={() => setIsOpen((s) => !s)}
             aria-controls="ftco-nav"
-            aria-expanded="false"
+            aria-expanded={isOpen}
             aria-label="Toggle navigation"
           >
-            <span className="oi oi-menu" /> Menu
+            <span
+              className={`hamburger ${isOpen ? "open" : ""}`}
+              aria-hidden="true"
+            >
+              <span />
+              <span />
+              <span />
+            </span>
+            <span className="sr-only">Menu</span>
           </button>
           <form action="#" className="searchform order-lg-last">
             <div className="form-group d-flex">
@@ -94,8 +102,11 @@ function menu() {
               </button>
             </div>
           </form>
-          <div className="collapse navbar-collapse" id="ftco-nav">
-            <ul className="navbar-nav mr-auto">
+          <div
+            className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}
+            id="ftco-nav"
+          >
+            <ul className="navbar-nav mr-auto" onClick={() => setIsOpen(false)}>
               <li className="nav-item">
                 <Link to="/" className="nav-link pl-0">
                   Home

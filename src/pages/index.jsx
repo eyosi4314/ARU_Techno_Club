@@ -23,7 +23,6 @@ function index() {
       <Section6 />
       <Section8 />
       <Section7 />
-
       {/* <Section9 /> */}
       {/* <Section10 /> */}
 

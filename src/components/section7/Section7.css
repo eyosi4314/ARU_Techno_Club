@@ -135,6 +135,7 @@
   .registration-image {
     min-height: 240px;
     border-radius: 10px;
+    display: none;
   }
   .registration-visual {
     padding: 0.5rem;

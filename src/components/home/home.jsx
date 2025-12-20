@@ -35,7 +35,7 @@ function Home() {
                     create solutions for society.
                   </p>
                   <p>
-                    <Link to="#" className="btn btn-primary px-4 py-3 mt-3">
+                    <Link to="/contact" className="btn btn-primary px-4 py-3 mt-3">
                       Contact Us
                     </Link>
                   </p>
