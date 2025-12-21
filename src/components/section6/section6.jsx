@@ -161,8 +161,7 @@ function Section6() {
                   <span className="position mb-2">Staff Representative </span>
                   <div className="faded">
                     <p>
-                      Empowering students through teamwork, practical skills and
-                      confidence to become innovative technology leaders.
+                      Supporting student-led innovation in tech to shape Ethiopia’s digital future with vision and global impact from Arsi to the world.
                     </p>
                     <ul className="ftco-social text-center">
                       <li className="ftco-animate">
