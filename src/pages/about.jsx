@@ -11,13 +11,9 @@ function about() {
     <>
       <Menu />
       <Section4 />
-       <Second />
-       <Section3/>
-       
-
-     
+      <Second />
+      <Section3 />
       <Footer />
-     
     </>
   );
 }

@@ -9,7 +9,6 @@ import Section5 from "../components/section5/section5";
 import Section6 from "../components/section6/section6";
 import Section7 from "../components/section7/section7";
 import Section8 from "../components/section8/section8";
-import Section9 from "../components/section9/section9";
 
 function index() {
   return (
@@ -23,9 +22,6 @@ function index() {
       <Section6 />
       <Section8 />
       <Section7 />
-      {/* <Section9 /> */}
-      {/* <Section10 /> */}
-
       <Footer />
     </>
   );

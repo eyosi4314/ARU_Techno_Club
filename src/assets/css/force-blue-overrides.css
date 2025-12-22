@@ -1,7 +1,7 @@
-Force Blue Theme Overrides (loaded after main style.css)
+/* Force Blue Theme Overrides (loaded after main style.css) */
 :root {
-  --force-developer-cyan: #00e5ff !important; /* Neon cyan */
-  --force-developer-blue: #0d47a1 !important; /* Deep electric blue */
+  --force-developer-cyan: #00e5ff; /* Neon cyan */
+  --force-developer-blue: #0d47a1; /* Deep electric blue */
 }
 
 /* Buttons and primary elements */
@@ -51,7 +51,6 @@ Force Blue Theme Overrides (loaded after main style.css)
 
 /* Footer tweaks */
 
-
 /* Links and accents */
 /* a,
 .nav-link {
@@ -59,11 +58,9 @@ Force Blue Theme Overrides (loaded after main style.css)
 } */
 a:hover,
 .nav-item:hover,
-.nav-link:hover
- {
+.nav-link:hover {
   color: var(--force-developer-blue) !important;
 }
-
 
 /* Input focus and highlights */
 .form-control:focus {
@@ -72,10 +69,8 @@ a:hover,
 }
 
 /* Ensure material icon buttons in footer stand out */
- 
 
 /* Small utility: increase contrast for titles */
-
 
 /* Accessibility: ensure sufficient contrast for small text */
 
@@ -96,7 +91,6 @@ a:hover,
 .ftco-navbar-light .navbar-brand:hover,
 .ftco-navbar-light .navbar-brand:focus {
   color: #2563eb !important;
-  
 }
 
 /* Ensure link hover rules don't override brand text color */

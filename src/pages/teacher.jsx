@@ -1,9 +1,7 @@
 import React from "react";
 import Menu from "../components/menu/menu";
 import Footer from "../components/footer/footer";
-import Home from "../components/home/home";
 import Section6 from "../components/section6/section6";
-
 import Section8 from "../components/section8/section8";
 function teacher() {
   return (

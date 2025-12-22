@@ -17,20 +17,35 @@ function footer() {
                   <ul>
                     <li>
                       <span className="icon icon-map-marker" />
-                      <span className="text">
-                        Arsi University, Ethipoia , Asela Town
-                      </span>
+
+                      <a
+                        href="https://maps.app.goo.gl/wyGt1syRUkDJe3KU7"
+                        className="text"
+                      >
+                        Main Campus , Arsi University, Ethipoia{" "}
+                      </a>
                     </li>
                     <li>
                       <Link to="/home">
-                        <span className="icon icon-phone" />
-                        <span className="text">+2519090909</span>
+                        <span className="icon icon-telegram" />
+                        <a
+                          href="https://t.me/ARUTBCPublicAccessible"
+                          className="text"
+                        >
+                          ARU_Techno_Based_Club
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link to="#">
                         <span className="icon icon-envelope" />
-                        <span className="text">ARU_techno_Club@gmail.com</span>
+
+                        <a
+                          href="http://ARU_techno_Club@gmail.com"
+                          className="text"
+                        >
+                          ARU_techno_Club@gmail.com
+                        </a>
                       </Link>
                     </li>
                   </ul>
@@ -73,6 +88,7 @@ function footer() {
                     </div>
                   </div>
                 </div>
+                
                 <div className="block-21 mb-5 d-flex">
                   <Link
                     to="#"
@@ -106,6 +122,8 @@ function footer() {
                 </div>
               </div>
             </div>
+
+
             <div className="col-md-6 col-lg-3">
               <div className="ftco-footer-widget mb-5 ml-md-4">
                 <h2 className="ftco-heading-2">Links</h2>

@@ -11,7 +11,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(45deg, #0d1128 0%, #21cbf3 100%) !important;
+  background: linear-gradient(45deg, #0d1128 0%, #467ee8 100%) !important;
   opacity: 0.5;
   transition: opacity 260ms ease, transform 420ms ease,
     background-position 600ms ease;
@@ -32,6 +32,7 @@
   transition: transform 420ms cubic-bezier(0.2, 0.9, 0.2, 1),
     box-shadow 420ms cubic-bezier(0.2, 0.9, 0.2, 1);
   position: relative;
+  
   z-index: 2;
 }
 
@@ -40,12 +41,18 @@
   box-shadow: 0 30px 60px rgba(2, 6, 23, 0.18);
 }
 
+.img-video .video .icon-video span,
+.img-video .video .icon-video svg {
+  color: #fff !important;
+  fill: #fff !important;
+}
+
 /* Play icon emphasis */
 .img-video .video .icon-video {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: linear-gradient(90deg, #2196f3, #21cbf3);
+  background: linear-gradient(90deg, #467ee8 0%, #1e40af 100%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -56,7 +63,20 @@
   background: linear-gradient(90deg, #00e5ff, #0d47a1);
   box-shadow: 0 12px 36px rgba(13, 71, 161, 0.22);
 }
-
+.img-video .video .icon-video:hover span,
+.img-video .video .icon-video:hover svg {
+  color: #1e40af !important;
+  fill: #1e40af !important;
+}
+.img-video .video .icon-video:hover {
+  background: #467ee8 !important;          /* keep background forced */
+  transform: scale(1.06) !important;
+  box-shadow: 0 18px 38px rgba(30, 64, 175, 0.18) !important;
+}
+section.ftco-section.img .img-video .video .icon-video,
+section.ftco-section.img .img-video .video .icon-video span {
+  transition: transform 180ms ease, color 140ms ease, fill 140ms ease !important;
+}
 /* Ensure content sits above overlay */
 .ftco-section.img .heading-section,
 .ftco-section.img .block-18,

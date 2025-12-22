@@ -22,20 +22,33 @@ function menu() {
               <div className="row d-flex">
                 <div className="col-md d-flex topper align-items-center align-items-stretch py-md-4">
                   <div className="icon d-flex justify-content-center align-items-center">
-                    <span className="icon-paper-plane" />
+                    <svg className="email-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M3 5.5A2.5 2.5 0 015.5 3h13A2.5 2.5 0 0121 5.5v13A2.5 2.5 0 0118.5 21h-13A2.5 2.5 0 013 18.5v-13zM5 6v12h14V6l-7 5L5 6z" fill="currentColor" />
+                    </svg>
                   </div>
                   <div className="text">
                     <span>Email</span>
-                    <span>ARU_techno_Club@gmail.com</span>
+                    <a className="official-email" href="http://ARU_techno_Club@gmail.com">
+                      {" "}
+                      Offical Email
+                    </a>
                   </div>
                 </div>
                 <div className="col-md d-flex topper align-items-center align-items-stretch py-md-4">
                   <div className="icon d-flex justify-content-center align-items-center">
-                    <span className="icon-phone2" />
+                    <svg className="telegram-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 240 240" fill="none" aria-hidden="true">
+                      <path d="M20 120 L220 30 L140 200 L120 160 L80 200 Z" fill="currentColor" />
+                    </svg>
                   </div>
                   <div className="text">
-                    <span>Call</span>
-                    <span>Call Us: +2519090909</span>
+                    <span>Telegram</span>
+
+                    <span>
+                      {" "}
+                      <a className="official-telegram" href="https://t.me/ARUTBCPublicAccessible">
+                        Offical Channel
+                      </a>
+                    </span>
                   </div>
                 </div>
                 <div className="col-md topper d-flex align-items-center justify-content-end">
@@ -50,14 +63,14 @@ function menu() {
                     <p className="mb-2 mb-md-0">
                       <Link
                         to="/contact"
-                        className="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center"
+                        className="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center login-btn"
                       >
                         <img
                           src={Club_logo}
                           alt="Club logo"
                           className="brand-logo"
                         />
-                        <span>Log In</span>
+                        <span className="login-text">Log In</span>
                       </Link>
                     </p>
                   </div>

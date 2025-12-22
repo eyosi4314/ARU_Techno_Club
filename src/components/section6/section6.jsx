@@ -1,4 +1,5 @@
 import React from "react";
+import "./section6.css";
 import teacher1 from "../../assets/images/Mr_Milikesa.jpg";
 import teacher2 from "../../assets/images/Mr_Sultan.jpg";
 import teacher3 from "../../assets/images/Ms_marta2.jpg";
@@ -7,7 +8,7 @@ import teacher4 from "../../assets/images/Mr_Sadik.jpg";
 function Section6() {
   return (
     <>
-      <section className="ftco-section bg-light">
+      <section className="ftco-section bg-light section6">
         <div className="container-fluid px-4">
           <div className="row justify-content-center mb-5 pb-2">
             <div className="col-md-8 text-center heading-section">
@@ -38,22 +39,22 @@ function Section6() {
                       Based Club.
                     </p>
                     <ul className="ftco-social text-center">
-                      <li className="ftco-animate">
+                      <li >
                         <a href="#">
                           <span className="icon-twitter" />
                         </a>
                       </li>
-                      <li className="ftco-animate">
+                      <li >
                         <a href="#">
                           <span className="icon-facebook" />
                         </a>
                       </li>
-                      <li className="ftco-animate">
+                      <li >
                         <a href="#">
                           <span className="icon-google-plus" />
                         </a>
                       </li>
-                      <li className="ftco-animate">
+                      <li >
                         <a href="#">
                           <span className="icon-instagram" />
                         </a>
@@ -81,22 +82,22 @@ function Section6() {
                       University.
                     </p>
                     <ul className="ftco-social text-center">
-                      <li className="ftco-animate">
+                      <li  >
                         <a href="#">
                           <span className="icon-twitter" />
                         </a>
                       </li>
-                      <li className="ftco-animate">
+                      <li  >
                         <a href="#">
                           <span className="icon-facebook" />
                         </a>
                       </li>
-                      <li className="ftco-animate">
+                      <li  >
                         <a href="#">
                           <span className="icon-google-plus" />
                         </a>
                       </li>
-                      <li className="ftco-animate">
+                      <li  >
                         <a href="#">
                           <span className="icon-instagram" />
                         </a>
@@ -123,22 +124,22 @@ function Section6() {
                       and confidence to become innovative technology leaders.
                     </p>
                     <ul className="ftco-social text-center">
-                      <li className="ftco-animate">
+                      <li  >
                         <a href="#">
                           <span className="icon-twitter" />
                         </a>
                       </li>
-                      <li className="ftco-animate">
+                      <li  >
                         <a href="#">
                           <span className="icon-facebook" />
                         </a>
                       </li>
-                      <li className="ftco-animate">
+                      <li  >
                         <a href="#">
                           <span className="icon-google-plus" />
                         </a>
                       </li>
-                      <li className="ftco-animate">
+                      <li  >
                         <a href="#">
                           <span className="icon-instagram" />
                         </a>
@@ -161,25 +162,27 @@ function Section6() {
                   <span className="position mb-2">Staff Representative </span>
                   <div className="faded">
                     <p>
-                      Supporting student-led innovation in tech to shape Ethiopia’s digital future with vision and global impact from Arsi to the world.
+                      Supporting student-led innovation in tech to shape
+                      Ethiopia’s digital future with vision and global impact
+                      from Arsi to the world.
                     </p>
                     <ul className="ftco-social text-center">
-                      <li className="ftco-animate">
+                      <li  >
                         <a href="#">
                           <span className="icon-twitter" />
                         </a>
                       </li>
-                      <li className="ftco-animate">
+                      <li  >
                         <a href="#">
                           <span className="icon-facebook" />
                         </a>
                       </li>
-                      <li className="ftco-animate">
+                      <li  >
                         <a href="#">
                           <span className="icon-google-plus" />
                         </a>
                       </li>
-                      <li className="ftco-animate">
+                      <li  >
                         <a href="#">
                           <span className="icon-instagram" />
                         </a>

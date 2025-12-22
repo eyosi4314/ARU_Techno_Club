@@ -1,0 +1,38 @@
+/* Forced overrides for Section3 icons - section3.forced.css */
+/* Scope: only affects icons inside .services-2 in Section3 */
+.services-2 .icon {
+  background: #467ee8 !important; /* force background */
+  color: #fff !important; /* default icon color */
+  border-radius: 10px !important;
+  width: 52px !important;
+  height: 52px !important;
+  min-width: 52px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 6px 18px rgba(30, 64, 175, 0.12) !important;
+  transition: background 0.14s ease, color 0.14s ease, fill 0.14s ease !important;
+}
+
+/* Ensure MUI SVG icons use fill/color as white by default */
+.services-2 .icon svg {
+  fill: #fff !important;
+  color: #fff !important;
+  width: 28px !important;
+  height: 28px !important;
+}
+
+/* Hover: keep background the same, but change icon color to #1e40af */
+/* .services-2 .icon:hover {
+  background: #1e40af !important;
+} */
+.services-2 .icon:hover svg {
+  fill: #1e40af !important;
+  color: #1e40af !important;
+}
+
+/* Make selectors specific to avoid affecting other components */
+section .services-2 .icon,
+section .services-2 .icon svg {
+  transition: color 0.12s ease, fill 0.12s ease !important;
+}

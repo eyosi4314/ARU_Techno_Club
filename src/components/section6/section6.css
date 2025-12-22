@@ -1,0 +1,14 @@
+/* Styles specific to Section6 component */
+.section6 .text h3 {
+  transition: color 0.18s ease;
+}
+
+.section6 .text .position {
+  color: #467ee8 !important;
+}
+.section6 .staff:hover .text h3 {
+  color: #1e40af !important;
+}
+.section6 .staff:hover .ftco-social span {
+  color: #1e40af !important;
+}

@@ -57,14 +57,17 @@
   margin: 0 !important;
 }
 .owl-carousel.home-slider .slider-item .text .btn-primary {
-  background: #fd6100;
+  background: #467ee8;
   border: none;
   padding: 10px 30px;
   font-size: 16px;
   font-weight: 600;
 }
-.owl-carousel.home-slider .slider-item .text .btn-primary:hover {
-  background: #e65500;
+.owl-carousel.home-slider .slider-item .text .btn-primary:hover,
+.owl-carousel.home-slider .slider-item .container .col-md-6 .btn-primary:hover {
+  /* Force only the button text color on hover so it's visible against the background */
+  color: #1e40af !important;
+  /* keep the background unchanged to avoid making text invisible */
 }
 
 /* Ensure slide text uses same styles even when markup doesn't include the .text wrapper */
@@ -112,10 +115,9 @@
 .owl-carousel.home-slider .slider-item .container .col-md-6 h1,
 .owl-carousel.home-slider .slider-item .container .col-md-6 p {
   background: transparent !important;
-  
 }
 .owl-carousel.home-slider .slider-item .container .col-md-6 {
-   margin-top: 70px !important;
+  margin-top: 70px !important;
 }
 
 /* Tighten spacing between title, paragraph and button */

@@ -37,7 +37,15 @@
 .block-20:hover::after {
   opacity: 0.6;
 }
+.blog-entry:hover .heading a {
+  color: #1e40af !important;
+  font-weight: bold;
+}
 
+.blog-entry:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+}
 /* Date badge styling */
 .meta-date {
   background: rgba(255, 255, 255, 0.08);
@@ -73,9 +81,21 @@
   color: #475569;
   margin-bottom: 0.75rem;
 }
+  .mr-2 {
+    color: #1e40af !important;
+  }
+  .mr-2:hover {
+    color: #0d47a1 !important;
+    font-weight: bold;
+  }
 .blog-entry .btn-primary {
   background: linear-gradient(90deg, var(--vibrant-1), var(--vibrant-2));
   border: none;
+}
+.blog-entry .btn-primary:hover {
+  background: linear-gradient(90deg, #1e40af, #0d47a1);
+  color: #1e40af !important;
+  font-weight: bold;
 }
 
 /* Icons and meta alignment */
