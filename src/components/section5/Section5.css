@@ -48,10 +48,11 @@
   color: #0f172a;
   font-weight: 600;
   text-decoration: none;
+  transition: color 0.18s ease;
 }
 .course-card:hover h3 a {
   color: #1e40af !important;
-  font-weight: bold;
+  font-weight: 700 !important;
 }
 .course-card p {
   color: #475569;
@@ -120,9 +121,7 @@
     text-overflow: ellipsis;
     font-size: 1rem;
   }
-  .course-card h3 a:hover {
-    color: #1e40af !important;
-  }
+  /* rely on parent hover (.course-card:hover) to change h3 color for consistency & better accessibility */
 
   .course-card .course-desc {
     display: -webkit-box;

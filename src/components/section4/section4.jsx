@@ -60,8 +60,11 @@ function Section4() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="icon-video popup-vimeo d-flex justify-content-center align-items-center"
+                      aria-label="Play video (opens in new tab)"
                     >
-                      <span className="ion-ios-play" />
+                      <i className="material-icons" aria-hidden="true">
+                        play_circle_filled
+                      </i>
                     </a>
                   </div>
                 </div>

@@ -16,7 +16,7 @@ function footer() {
                 <div className="block-23 mb-3">
                   <ul>
                     <li>
-                      <span className="icon icon-map-marker" />
+                      <span className="material-icons" style={{fontSize: '18px', verticalAlign: 'middle', marginRight: '8px'}}>location_on</span>
 
                       <a
                         href="https://maps.app.goo.gl/wyGt1syRUkDJe3KU7"
@@ -27,7 +27,7 @@ function footer() {
                     </li>
                     <li>
                       <Link to="/home">
-                        <span className="icon icon-telegram" />
+                        <span className="material-icons" style={{fontSize: '18px', verticalAlign: 'middle', marginRight: '8px'}}>send</span>
                         <a
                           href="https://t.me/ARUTBCPublicAccessible"
                           className="text"
@@ -38,7 +38,7 @@ function footer() {
                     </li>
                     <li>
                       <Link to="#">
-                        <span className="icon icon-envelope" />
+                        <span className="material-icons" style={{fontSize: '18px', verticalAlign: 'middle', marginRight: '8px'}}>email</span>
 
                         <a
                           href="http://ARU_techno_Club@gmail.com"
