@@ -3,6 +3,7 @@ import "./Section7.css";
 import webDev from "../../assets/images/web_development.jpg";
 import { auth, db } from "../../utility/firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { setDoc, doc, serverTimestamp } from "firebase/firestore";
 
 function section7() {
   const [fullName, setFullName] = useState("");
@@ -28,6 +29,12 @@ function section7() {
       return;
     }
 
+    // Password length check (Firebase requires minimum 6 characters)
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters.");
+      return;
+    }
+
     setLoading(true);
     try {
       const res = await createUserWithEmailAndPassword(auth, email, password);
@@ -36,8 +43,8 @@ function section7() {
       // Set display name
       await updateProfile(user, { displayName: fullName });
 
-      // Save additional profile info to Firestore
-      await db.collection("users").doc(user.uid).set({
+      // Save additional profile info to Firestore (modular API)
+      await setDoc(doc(db, "users", user.uid), {
         fullName,
         department,
         batch,
@@ -45,10 +52,14 @@ function section7() {
         interest,
         message,
         email,
-        createdAt: new Date().toISOString(),
+        createdAt: serverTimestamp(),
       });
 
-      setSuccess("Registration successful — welcome to ARU Techno Club!");
+      setSuccess("Successfully finished");
+      // hide form and navigate home after short delay
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 2000);
       // clear form
       setFullName("");
       setDepartment("");
@@ -123,123 +134,129 @@ function section7() {
               {error && <div className="alert alert-danger">{error}</div>}
               {success && <div className="alert alert-success">{success}</div>}
 
-              <form onSubmit={handleSubmit} className="registration-form">
-                <div className="form-row">
-                  <div className="form-group col-md-6">
-                    <input
-                      value={fullName}
-                      onChange={(e) => setFullName(e.target.value)}
-                      type="text"
-                      className="form-control"
-                      placeholder="Full name"
-                      required
-                    />
+              {!success && (
+                <form onSubmit={handleSubmit} className="registration-form">
+                  <div className="form-row">
+                    <div className="form-group col-md-6">
+                      <input
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
+                        type="text"
+                        className="form-control"
+                        placeholder="Full name"
+                        required
+                      />
+                    </div>
+                    <div className="form-group col-md-6">
+                      <input
+                        value={department}
+                        onChange={(e) => setDepartment(e.target.value)}
+                        type="text"
+                        className="form-control"
+                        placeholder="Department"
+                      />
+                    </div>
+                    <div className="form-group col-md-6">
+                      <input
+                        value={batch}
+                        onChange={(e) => setBatch(e.target.value)}
+                        type="text"
+                        className="form-control"
+                        placeholder="Batch/year"
+                      />
+                    </div>
+                    <div className="form-group col-md-6">
+                      <input
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        type="email"
+                        className="form-control"
+                        placeholder="Email address"
+                        required
+                      />
+                    </div>
                   </div>
-                  <div className="form-group col-md-6">
-                    <input
-                      value={department}
-                      onChange={(e) => setDepartment(e.target.value)}
-                      type="text"
-                      className="form-control"
-                      placeholder="Department"
-                    />
-                  </div>
-                  <div className="form-group col-md-6">
-                    <input
-                      value={batch}
-                      onChange={(e) => setBatch(e.target.value)}
-                      type="text"
-                      className="form-control"
-                      placeholder="Batch/year"
-                    />
-                  </div>
-                  <div className="form-group col-md-6">
-                    <input
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      type="email"
-                      className="form-control"
-                      placeholder="Email address"
-                      required
-                    />
-                  </div>
-                </div>
 
-                <div className="form-row">
-                  <div className="form-group col-md-6">
-                    <input
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      type="tel"
+                  <div className="form-row">
+                    <div className="form-group col-md-6">
+                      <input
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        type="tel"
+                        className="form-control"
+                        placeholder="Phone (optional)"
+                      />
+                    </div>
+                    <div className="form-group col-md-6">
+                      <select
+                        value={interest}
+                        onChange={(e) => setInterest(e.target.value)}
+                        className="form-control"
+                      >
+                        <option value="">Area of interest</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="AI & Machine Learning">
+                          AI & Machine Learning
+                        </option>
+                        <option value="Cybersecurity">Cybersecurity</option>
+                        <option value="Competitive Programming">
+                          Competitive Programming
+                        </option>
+                        <option value="Design">Design</option>
+                        <option value="Data Science">Data Science</option>
+                        <option value="Others">Others</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="form-group">
+                    <textarea
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      name="message"
+                      id="message"
+                      cols={30}
+                      rows={4}
                       className="form-control"
-                      placeholder="Phone (optional)"
+                      placeholder="Tell us a bit about yourself (optional)"
                     />
                   </div>
-                  <div className="form-group col-md-6">
-                    <select
-                      value={interest}
-                      onChange={(e) => setInterest(e.target.value)}
-                      className="form-control"
-                    >
-                      <option value="">Area of interest</option>
-                      <option>Web Development</option>
-                      <option>AI & Machine Learning</option>
-                      <option>Cybersecurity</option>
-                      <option>Competitive Programming</option>
-                      <option>Design</option>
-                      <option>Data Science</option>
-                      <option>Others</option>
-                    </select>
-                  </div>
-                </div>
 
-                <div className="form-group">
-                  <textarea
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    name="message"
-                    id="message"
-                    cols={30}
-                    rows={4}
-                    className="form-control"
-                    placeholder="Tell us a bit about yourself (optional)"
-                  />
-                </div>
+                  <div className="form-row">
+                    <div className="form-group col-md-6">
+                      <input
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        type="password"
+                        className="form-control"
+                        placeholder="Password (min 6 chars)"
+                        required
+                      />
+                    </div>
+                    <div className="form-group col-md-6 d-flex align-items-end">
+                      <small className="muted">
+                        We'll use this email to sign in to club updates.
+                      </small>
+                    </div>
+                  </div>
 
-                <div className="form-row">
-                  <div className="form-group col-md-6">
-                    <input
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      type="password"
-                      className="form-control"
-                      placeholder="Password (min 6 chars)"
-                      required
-                    />
+                  <div className="form-row align-items-center">
+                    <div className="form-group mb-0">
+                      <button
+                        type="submit"
+                        className="btn btn-primary btn-register"
+                        disabled={loading}
+                      >
+                        {loading ? "Registering..." : "Register Now"}
+                      </button>
+                    </div>
+                    <div className="form-group mb-0 ml-3 muted small">
+                      By registering you agree to receive updates. Unsubscribe
+                      anytime.
+                    </div>
                   </div>
-                  <div className="form-group col-md-6 d-flex align-items-end">
-                    <small className="muted">
-                      We'll use this email to sign in to club updates.
-                    </small>
-                  </div>
-                </div>
-
-                <div className="form-row align-items-center">
-                  <div className="form-group mb-0">
-                    <button
-                      type="submit"
-                      className="btn btn-primary btn-register"
-                      disabled={loading}
-                    >
-                      {loading ? "Registering..." : "Register Now"}
-                    </button>
-                  </div>
-                  <div className="form-group mb-0 ml-3 muted small">
-                    By registering you agree to receive updates. Unsubscribe
-                    anytime.
-                  </div>
-                </div>
-              </form>
+                </form>
+              )}
             </div>
             <div className="col-md-6 d-flex align-items-stretch">
               <div className="registration-visual w-100 d-flex align-items-stretch">
