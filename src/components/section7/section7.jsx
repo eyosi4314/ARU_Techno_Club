@@ -1,8 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Section7.css";
 import webDev from "../../assets/images/web_development.jpg";
+import { auth, db } from "../../utility/firebase";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 function section7() {
+  const [fullName, setFullName] = useState("");
+  const [department, setDepartment] = useState("");
+  const [batch, setBatch] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [interest, setInterest] = useState("");
+  const [message, setMessage] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError(null);
+    setSuccess(null);
+
+    // Basic validation
+    if (!fullName.trim() || !email.trim() || !password) {
+      setError("Please provide your full name, email and a password.");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const res = await createUserWithEmailAndPassword(auth, email, password);
+      const user = res.user;
+
+      // Set display name
+      await updateProfile(user, { displayName: fullName });
+
+      // Save additional profile info to Firestore
+      await db.collection("users").doc(user.uid).set({
+        fullName,
+        department,
+        batch,
+        phone,
+        interest,
+        message,
+        email,
+        createdAt: new Date().toISOString(),
+      });
+
+      setSuccess("Registration successful — welcome to ARU Techno Club!");
+      // clear form
+      setFullName("");
+      setDepartment("");
+      setBatch("");
+      setEmail("");
+      setPhone("");
+      setInterest("");
+      setMessage("");
+      setPassword("");
+    } catch (err) {
+      console.error(err);
+      // Provide friendly error message
+      setError(err.message || "Registration failed. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       <section className="ftco-section contact-section">
@@ -54,17 +118,27 @@ function section7() {
                   updates.
                 </p>
               </div>
-              <form action="#" className="registration-form">
+
+              {/* Feedback messages */}
+              {error && <div className="alert alert-danger">{error}</div>}
+              {success && <div className="alert alert-success">{success}</div>}
+
+              <form onSubmit={handleSubmit} className="registration-form">
                 <div className="form-row">
                   <div className="form-group col-md-6">
                     <input
+                      value={fullName}
+                      onChange={(e) => setFullName(e.target.value)}
                       type="text"
                       className="form-control"
                       placeholder="Full name"
+                      required
                     />
                   </div>
                   <div className="form-group col-md-6">
                     <input
+                      value={department}
+                      onChange={(e) => setDepartment(e.target.value)}
                       type="text"
                       className="form-control"
                       placeholder="Department"
@@ -72,6 +146,8 @@ function section7() {
                   </div>
                   <div className="form-group col-md-6">
                     <input
+                      value={batch}
+                      onChange={(e) => setBatch(e.target.value)}
                       type="text"
                       className="form-control"
                       placeholder="Batch/year"
@@ -79,23 +155,33 @@ function section7() {
                   </div>
                   <div className="form-group col-md-6">
                     <input
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       type="email"
                       className="form-control"
                       placeholder="Email address"
+                      required
                     />
                   </div>
                 </div>
+
                 <div className="form-row">
                   <div className="form-group col-md-6">
                     <input
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
                       type="tel"
                       className="form-control"
                       placeholder="Phone (optional)"
                     />
                   </div>
                   <div className="form-group col-md-6">
-                    <select className="form-control">
-                      <option>Area of interest</option>
+                    <select
+                      value={interest}
+                      onChange={(e) => setInterest(e.target.value)}
+                      className="form-control"
+                    >
+                      <option value="">Area of interest</option>
                       <option>Web Development</option>
                       <option>AI & Machine Learning</option>
                       <option>Cybersecurity</option>
@@ -106,24 +192,46 @@ function section7() {
                     </select>
                   </div>
                 </div>
+
                 <div className="form-group">
                   <textarea
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     name="message"
                     id="message"
                     cols={30}
                     rows={4}
                     className="form-control"
                     placeholder="Tell us a bit about yourself (optional)"
-                    defaultValue={""}
                   />
                 </div>
+
+                <div className="form-row">
+                  <div className="form-group col-md-6">
+                    <input
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      type="password"
+                      className="form-control"
+                      placeholder="Password (min 6 chars)"
+                      required
+                    />
+                  </div>
+                  <div className="form-group col-md-6 d-flex align-items-end">
+                    <small className="muted">
+                      We'll use this email to sign in to club updates.
+                    </small>
+                  </div>
+                </div>
+
                 <div className="form-row align-items-center">
                   <div className="form-group mb-0">
                     <button
                       type="submit"
                       className="btn btn-primary btn-register"
+                      disabled={loading}
                     >
-                      Register Now
+                      {loading ? "Registering..." : "Register Now"}
                     </button>
                   </div>
                   <div className="form-group mb-0 ml-3 muted small">
