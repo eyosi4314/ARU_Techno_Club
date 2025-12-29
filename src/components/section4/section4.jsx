@@ -56,7 +56,7 @@ function Section4() {
                 >
                   <div className="video justify-content-center">
                     <a
-                      href="https://youtu.be/_V6PYCiLuHI?si=hwGXEOQWbhX4ak-I"
+                      href="#"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="icon-video popup-vimeo d-flex justify-content-center align-items-center"
@@ -72,12 +72,12 @@ function Section4() {
               <div className="col-md-6 heading-section heading-section-white pl-lg-5 pt-md-0 pt-5">
                 <h2 className="mb-4">Arsi University</h2>
                 <p>
-                  Arsi University is a growing public institution committed to
-                  academic excellence, innovation, and community impact. The
-                  university empowers students through quality education,
-                  skilled instructors, and a supportive learning environment
-                  that encourages research, technology, and real-world problem
-                  solving.
+                  Arsi University, established in October 2014, is a
+                  comprehensive institution of higher education in Ethiopia. It
+                  consists of five colleges and one school, offering a diverse
+                  range of academic programs. The university is classified as an
+                  Applied Science University, emphasizing practical education
+                  and applied research.
                 </p>
                 <p>
                   The university equips students with advanced technology
@@ -141,7 +141,7 @@ function Section4() {
                       <div className="text">
                         <strong
                           className="number"
-                          data-number={15}
+                          data-number={10}
                           style={{
                             whiteSpace: "nowrap",
                             display: "inline-flex",
@@ -150,7 +150,7 @@ function Section4() {
                           }}
                         >
                           <AnimatedNumber
-                            value={15}
+                            value={10}
                             duration={2.6}
                             className="countup-number"
                             style={{
@@ -185,7 +185,7 @@ function Section4() {
                       <div className="text">
                         <strong
                           className="number"
-                          data-number={70}
+                          data-number={80}
                           style={{
                             whiteSpace: "nowrap",
                             display: "inline-flex",
@@ -194,7 +194,7 @@ function Section4() {
                           }}
                         >
                           <AnimatedNumber
-                            value={70}
+                            value={80}
                             duration={2.6}
                             className="countup-number"
                             style={{
@@ -217,7 +217,7 @@ function Section4() {
                             +
                           </span>
                         </strong>
-                        <span>Departments</span>
+                        <span>Programs</span>
                       </div>
                     </div>
                   </div>
@@ -229,7 +229,7 @@ function Section4() {
                       <div className="text">
                         <strong
                           className="number"
-                          data-number={80}
+                          data-number={50}
                           style={{
                             whiteSpace: "nowrap",
                             display: "inline-flex",
@@ -238,7 +238,7 @@ function Section4() {
                           }}
                         >
                           <AnimatedNumber
-                            value={80}
+                            value={50}
                             duration={2.2}
                             className="countup-number"
                             style={{
