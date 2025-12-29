@@ -31,7 +31,7 @@ function Section6() {
                   />
                 </div>
                 <div className="text pt-3 text-center">
-                  <h3>Mr. Milikesa Dejena </h3>
+                  <h3>Mr. Milikesa Dejene </h3>
                   <span className="position mb-2">IS Department Head</span>
                   <div className="faded">
                     <p>
