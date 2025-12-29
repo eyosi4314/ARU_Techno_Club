@@ -2,7 +2,7 @@ import React from "react";
 import "./section6.css";
 import teacher1 from "../../assets/images/Mr_Milikesa.jpg";
 import teacher2 from "../../assets/images/Mr_Sultan.jpg";
-import teacher3 from "../../assets/images/Ms_marta2.jpg";
+import teacher3 from "../../assets/images/Ms_Mareta_1.jpg";
 import teacher4 from "../../assets/images/Mr_Sadik.jpg";
 
 function Section6() {
